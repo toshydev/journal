@@ -4,3 +4,7 @@
   padding: 1rem;
   resize: none;
 }
+
+.textarea-field:focus {
+  outline: 2px solid var(--color-nemo);
+}

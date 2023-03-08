@@ -1,0 +1,4 @@
+.entry-section {
+  display: flex;
+  flex-direction: column;
+}

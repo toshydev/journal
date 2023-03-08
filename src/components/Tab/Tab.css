@@ -1,0 +1,25 @@
+.tab-container {
+}
+
+.tab-container__text {
+  font-weight: bold;
+  display: inline-block;
+}
+
+.tab-container__badge {
+  background: var(--color-water-10);
+  border-radius: 15px;
+  display: inline-block;
+  width: 25px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.--text-active {
+  color: var(--color-nemo);
+}
+
+.--badge-active {
+  background: var(--color-nemo);
+  color: white;
+}

@@ -1,0 +1,28 @@
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.entry__date {
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.entry__title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entry__title {
+  display: inline;
+  font-size: 1.2rem;
+}
+
+.entry__breakline {
+  background-color: var(--color-water-10);
+  width: 100%;
+  height: 1px;
+}

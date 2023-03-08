@@ -1,0 +1,10 @@
+.footer {
+  background: var(--color-granite);
+  position: absolute;
+  width: 100vw;
+  color: var(--color-foam);
+}
+
+.footer__text {
+  text-align: center;
+}

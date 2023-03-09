@@ -1,4 +1,6 @@
 .icon-button {
+  background-color: transparent;
+  border: none;
 }
 
 .icon-button svg {

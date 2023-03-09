@@ -1,0 +1,5 @@
+.divider {
+  background-color: var(--color-water-10);
+  width: 75%;
+  height: 2px;
+}

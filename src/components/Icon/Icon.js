@@ -1,6 +1,4 @@
 import "./Icon.css";
-import { ReactComponent as StarFilled } from "../../assets/images/star-filled.svg";
-import { ReactComponent as Star } from "../../assets/images/star.svg";
 import { useState } from "react";
 import Svg from "../Svg/Svg";
 
@@ -17,9 +15,9 @@ export default function Icon() {
       }}
     >
       {isFavorite ? (
-        <Svg variant="github" width="24px" />
+        <Svg variant="starFilled" width="24px" color="#FF4A11" />
       ) : (
-        <Svg variant="face" width="24px" />
+        <Svg variant="starEmpty" width="24px" />
       )}
     </button>
   );

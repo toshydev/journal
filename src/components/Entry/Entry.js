@@ -10,7 +10,6 @@ export default function Entry({ title, date, text, active }) {
         <Icon active={active} />
       </section>
       <p className="entry__text">{text}</p>
-      <div className="entry__breakline" />
     </article>
   );
 }

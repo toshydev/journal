@@ -1,30 +1,49 @@
 import Entry from "../Entry/Entry";
 import "./EntryList.css";
 
+const entries = [
+  {
+    id: 1000,
+    date: "Feb 5, 2025",
+    motto: "We are in a state of chaos",
+    notes:
+      "Today I learned about React State. It was fun! I can't wait to learn more.",
+  },
+  {
+    id: 999,
+    date: "Feb 4, 2025",
+    motto: "Props, Props, Props",
+    notes:
+      "Today I learned about React Props. Mad props to everyone who understands this!",
+  },
+  {
+    id: 998,
+    date: "Feb 3, 2025",
+    motto: "How to nest components online fast",
+    notes:
+      "Today I learned about React Components and how to nest them like a pro. Application design is so much fun!",
+  },
+  {
+    id: 997,
+    date: "Feb 2, 2025",
+    motto: "I'm a React Developer",
+    notes: "My React-ion when I learned about React: 😍",
+  },
+];
+
 export default function EntryList() {
   return (
     <ul className="entry-container">
-      <Entry
-        title="That's life in the city"
-        date="Feb 27, 2028"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        active
-      />
-      <Entry
-        title="That's life in the city"
-        date="Feb 27, 2028"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      />
-      <Entry
-        title="That's life in the city"
-        date="Feb 27, 2028"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      />
-      <Entry
-        title="That's life in the city"
-        date="Feb 27, 2028"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      />
+      {entries.map((entry) => {
+        return (
+          <Entry
+            key={entry.id}
+            title={entry.motto}
+            date={entry.date}
+            text={entry.notes}
+          />
+        );
+      })}
     </ul>
   );
 }

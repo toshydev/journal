@@ -1,5 +1,7 @@
 import Entry from "../Entry/Entry";
 import "./EntryList.css";
+import Divider from "../Divider/Divider";
+import { Fragment } from "react";
 
 const entries = [
   {
@@ -34,14 +36,12 @@ const entries = [
 export default function EntryList() {
   return (
     <ul className="entry-container">
-      {entries.map((entry) => {
+      {entries.map((entry, index) => {
         return (
-          <Entry
-            key={entry.id}
-            title={entry.motto}
-            date={entry.date}
-            text={entry.notes}
-          />
+          <Fragment key={entry.id}>
+            {index > 0 && <Divider />}
+            <Entry title={entry.motto} date={entry.date} text={entry.notes} />
+          </Fragment>
         );
       })}
     </ul>

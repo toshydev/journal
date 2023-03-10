@@ -1,7 +1,6 @@
 .tab-bar {
   display: flex;
   flex-direction: row;
-  list-style: none;
   gap: 20px;
-  padding-left: 10%;
+  margin: 10% 15% 0 15%;
 }

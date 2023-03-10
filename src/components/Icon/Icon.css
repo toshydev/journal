@@ -1,10 +1,13 @@
 .icon-button {
   background-color: transparent;
   border: none;
+  border-radius: 5px;
+}
+
+.icon-button:hover {
+  background-color: var(--color-water-10);
 }
 
 .icon-button svg {
-  width: 25px;
-  height: 25px;
   display: inline;
 }

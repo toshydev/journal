@@ -1,21 +1,22 @@
-.tab-container {
-}
-
-.tab-container__text {
+.tab {
+  border-radius: 15px;
   font-weight: bold;
-  display: inline-block;
+  border-color: transparent;
 }
 
-.tab-container__badge {
-  background: var(--color-water-10);
+.tab:hover {
+  background-color: var(--color-water-10);
+}
+
+.tab__badge {
+  background-color: var(--color-water-10);
   border-radius: 15px;
   display: inline-block;
-  width: 25px;
-  text-align: center;
   margin-left: 5px;
+  width: 20px;
 }
 
-.--text-active {
+.--tab-active {
   color: var(--color-nemo);
 }
 

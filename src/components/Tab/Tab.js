@@ -1,25 +1,20 @@
 import "./Tab.css";
 
-export default function Tab({ text, number, active }) {
+export default function Tab({ text, number, active, onClick }) {
   return (
-    <li className="tab-container">
-      <p
-        className={
-          active ? "tab-container__text --text-active" : "tab-container__text"
-        }
-      >
-        {text}
-      </p>
+    <button
+      className={active ? "tab --tab-active" : "tab"}
+      type="button"
+      aria-label={`Show ${text}`}
+      onClick={onClick}
+    >
+      {text}
       <span
         aria-label={text}
-        className={
-          active
-            ? "tab-container__badge --badge-active"
-            : "tab-container__badge"
-        }
+        className={active ? "tab__badge --badge-active" : "tab__badge"}
       >
         {number}
       </span>
-    </li>
+    </button>
   );
 }

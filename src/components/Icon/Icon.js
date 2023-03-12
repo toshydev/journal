@@ -1,23 +1,32 @@
 import "./Icon.css";
-import { useState } from "react";
-import Svg from "../Svg/Svg";
+import SVGIcon from "../SVGIcon/SVGIcon";
 
-export default function Icon() {
-  const [isFavorite, setFavorite] = useState(false);
-
+export default function Icon({ onToggleFavorite, entry }) {
   return (
     <button
       className="icon-button"
       aria-label="favorite button"
       type="button"
       onClick={() => {
-        setFavorite(!isFavorite);
+        onToggleFavorite(entry.id);
       }}
     >
-      {isFavorite ? (
-        <Svg variant="starFilled" width="24px" color="#FF4A11" />
+      {entry.isFavorite ? (
+        <SVGIcon
+          variant="starFilled"
+          width="24px"
+          color="#FF4A11"
+          stroke="#FF4A11"
+          strokeWidth="2"
+        />
       ) : (
-        <Svg variant="starEmpty" width="24px" />
+        <SVGIcon
+          variant="starEmpty"
+          width="24px"
+          color="white"
+          stroke="#252629"
+          strokeWidth="2"
+        />
       )}
     </button>
   );

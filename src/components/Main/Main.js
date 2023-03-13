@@ -43,7 +43,9 @@ export default function Main() {
   const [entries, setEntries] = useLocalStorageState("entries", {
     defaultValue: initialEntries,
   });
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useLocalStorageState("filter", {
+    defaultValue: "all",
+  });
   const favoriteEntries = entries.filter((entry) => entry.isFavorite);
 
   function handleAddEntry(newEntry) {

@@ -2,6 +2,7 @@ import EntrySection from "../EntrySection/EntrySection";
 import Form from "../Form/Form";
 import "./Main.css";
 import { useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 import { uid } from "uid";
 
 const initialEntries = [
@@ -39,7 +40,9 @@ const initialEntries = [
 ];
 
 export default function Main() {
-  const [entries, setEntries] = useState(initialEntries);
+  const [entries, setEntries] = useLocalStorageState("entries", {
+    defaultValue: initialEntries,
+  });
   const [filter, setFilter] = useState("all");
   const favoriteEntries = entries.filter((entry) => entry.isFavorite);
 
